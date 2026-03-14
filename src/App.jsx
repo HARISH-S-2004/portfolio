@@ -32,22 +32,32 @@ function App() {
   return (
     <>
       <CustomCursor />
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${mobileMenuOpen ? 'menu-open-nav' : ''}`}>
         <div className="container nav-container">
-          <a href="#" className="logo">Harish<span className="text-gradient">.</span></a>
-          <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-            <a href="#work" onClick={() => setMobileMenuOpen(false)}>Work</a>
-            <a href="#process" onClick={() => setMobileMenuOpen(false)}>Process</a>
-            <a href="#vibe-coding" onClick={() => setMobileMenuOpen(false)}>Vibe Coding</a>
-            <a href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</a>
-            <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+          <a href="#" className={`logo ${mobileMenuOpen ? 'menu-open-logo' : ''}`}>Harish<span className="text-gradient">.</span></a>
+          <div className="nav-links desktop-menu">
+            <a href="#work">Work</a>
+            <a href="#process">Process</a>
+            <a href="#vibe-coding">Vibe Coding</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
           </div>
           <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle Menu">
             {mobileMenuOpen ? <X size={28} color="#ffffff" /> : <Menu size={28} color="var(--text-main)" />}
           </button>
         </div>
       </nav>
+
+      {/* Full-Screen Mobile Menu Overlay */}
+      <div className={`mobile-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+        <a href="#work" onClick={() => setMobileMenuOpen(false)}>Work</a>
+        <a href="#process" onClick={() => setMobileMenuOpen(false)}>Process</a>
+        <a href="#vibe-coding" onClick={() => setMobileMenuOpen(false)}>Vibe Coding</a>
+        <a href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</a>
+        <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
+        <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+      </div>
 
       <main>
         <Hero />
