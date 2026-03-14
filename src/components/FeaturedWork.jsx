@@ -214,6 +214,8 @@ const FeaturedWork = () => {
                 className="glass"
                 style={{ cursor: 'pointer', transition: 'all 0.4s cubic-bezier(0.25, 1, 0.5, 1)', position: 'relative', overflow: 'hidden', padding: 0, display: 'flex', flexDirection: 'column', height: '420px', borderRadius: '24px' }}
                 onClick={() => setActiveProject(project)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-10px)';
                   e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
@@ -299,6 +301,8 @@ const FeaturedWork = () => {
             className="glass"
             style={{ padding: '2.5rem', cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease', position: 'relative', overflow: 'hidden' }}
             onClick={() => setActiveProject(project)}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-10px)';
               e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';

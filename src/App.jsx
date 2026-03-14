@@ -44,7 +44,7 @@ function App() {
             <a href="#contact">Contact</a>
           </div>
           <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle Menu">
-            {mobileMenuOpen ? <X size={28} color="var(--text-main)" /> : <Menu size={28} color="var(--text-main)" />}
+            {mobileMenuOpen ? <X size={28} color="#ffffff" /> : <Menu size={28} color="var(--text-main)" />}
           </button>
         </div>
       </nav>

@@ -17,27 +17,23 @@ const DesignProcess = () => {
       <div className="container">
         <h2 className="section-title">Design <span className="text-gradient">Process</span></h2>
         
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem', marginTop: '4rem', position: 'relative' }}>
-          {/* Connecting line */}
-          <div style={{ position: 'absolute', top: '35px', left: '5%', right: '5%', height: '2px', background: 'linear-gradient(90deg, #6366f1, #d946ef, #10b981)', opacity: 0.2, zIndex: 0, display: window.innerWidth > 768 ? 'block' : 'none' }}></div>
+        <div className="process-grid" style={{ marginTop: '4rem', position: 'relative' }}>
+          {/* Connecting line inside CSS */}
+          <div className="process-line"></div>
           
           {steps.map((step, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 1, width: '120px' }}
+              transition={{ delay: index * 0.1, duration: 0.5, type: "spring", stiffness: 100 }}
+              className="process-item"
             >
-              <div style={{ 
-                width: '70px', height: '70px', borderRadius: '50%', background: 'white', 
-                boxShadow: 'var(--shadow-md)', display: 'flex', justifyContent: 'center', alignItems: 'center',
-                color: step.color, marginBottom: '1rem', border: `2px solid ${step.color}20`
-              }}>
+              <div className="process-icon-container" style={{ color: step.color, border: `2px solid ${step.color}20` }}>
                 {step.icon}
               </div>
-              <p style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--text-main)', textAlign: 'center' }}>{step.title}</p>
+              <p className="process-step-title">{step.title}</p>
             </motion.div>
           ))}
         </div>
