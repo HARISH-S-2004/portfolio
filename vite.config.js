@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  base: './' // Optimized for GitHub pages deployment
+  base: '/portfolio/' // Optimized for GitHub pages deployment
 })
