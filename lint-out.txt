@@ -1,0 +1,55 @@
+
+C:\Users\haris\Desktop\my portfolio\src\components\About.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\haris\Desktop\my portfolio\src\components\Achievements.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\haris\Desktop\my portfolio\src\components\Contact.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\haris\Desktop\my portfolio\src\components\DesignProcess.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\haris\Desktop\my portfolio\src\components\FeaturedWork.jsx
+    2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+  162:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  160 |       </div>
+  161 |
+> 162 |       {activeProject && <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />}
+      |                          ^^^^^^^^^^^^ This component is created during render
+  163 |     </section>
+  164 |   );
+  165 | };
+
+   73 |   const [activeProject, setActiveProject] = useState(null);
+   74 |
+>  75 |   const ProjectModal = ({ project, onClose }) => {
+      |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  76 |     if (!project) return null;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  77 |     return (
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 120 |     );
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 121 |   };
+      | ^^^^ The component is created during render here
+  122 |
+  123 |   return (
+  124 |     <section id="work" className="container">  react-hooks/static-components
+
+C:\Users\haris\Desktop\my portfolio\src\components\Hero.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\haris\Desktop\my portfolio\src\components\SkillsTools.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\haris\Desktop\my portfolio\src\components\VibeCoding.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 9 problems (9 errors, 0 warnings)
+
