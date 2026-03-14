@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import Hero from './components/Hero';
 import FeaturedWork from './components/FeaturedWork';
 import DesignProcess from './components/DesignProcess';
@@ -12,6 +13,9 @@ import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,14 +35,17 @@ function App() {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <a href="#" className="logo">Harish<span className="text-gradient">.</span></a>
-          <div className="nav-links">
-            <a href="#work">Work</a>
-            <a href="#process">Process</a>
-            <a href="#vibe-coding">Vibe Coding</a>
-            <a href="#skills">Skills</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+          <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+            <a href="#work" onClick={() => setMobileMenuOpen(false)}>Work</a>
+            <a href="#process" onClick={() => setMobileMenuOpen(false)}>Process</a>
+            <a href="#vibe-coding" onClick={() => setMobileMenuOpen(false)}>Vibe Coding</a>
+            <a href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</a>
+            <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
           </div>
+          <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle Menu">
+            {mobileMenuOpen ? <X size={28} color="var(--text-main)" /> : <Menu size={28} color="var(--text-main)" />}
+          </button>
         </div>
       </nav>
 

@@ -56,7 +56,7 @@ const About = () => {
 
                 {/* Profile Image (The 'Outside') */}
                 <img 
-                  src="/profile.png" 
+                  src="./profile.png" 
                   alt="Harish S"
                   className="float-anim"
                   style={{ 
