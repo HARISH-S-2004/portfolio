@@ -51,7 +51,7 @@ const SkillsTools = () => {
             {tools.map((tool, index) => (
               <div key={index} style={{ 
                 padding: '0.8rem 1.5rem', 
-                background: 'white', 
+                background: 'var(--surface)', 
                 borderRadius: '9999px',
                 boxShadow: 'var(--shadow-sm)',
                 fontWeight: 500,
@@ -63,7 +63,7 @@ const SkillsTools = () => {
             ))}
           </div>
 
-          <div style={{ marginTop: '3rem', padding: '2rem', background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(217, 70, 239, 0.1))', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.5)' }}>
+          <div style={{ marginTop: '3rem', padding: '2rem', background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(217, 70, 239, 0.1))', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)' }}>
             <h3 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}><Target size={24} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '0.5rem', color: 'var(--accent-2)' }}/> Always learning</h3>
             <p style={{ color: 'var(--text-muted)' }}>I constantly explore new design patterns, frontend frameworks, and AI workflows to stay at the cutting edge of digital product creation.</p>
           </div>

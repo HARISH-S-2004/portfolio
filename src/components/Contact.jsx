@@ -66,7 +66,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Name" 
                 required
-                style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '16px', border: '1px solid var(--surface-border)', background: 'rgba(255, 255, 255, 0.5)', fontFamily: 'Inter', fontSize: '1rem', outline: 'none', transition: 'box-shadow 0.2s', ...(status === 'submitting' && { opacity: 0.7, pointerEvents: 'none' }) }} 
+                style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '16px', border: '1px solid var(--surface-border)', background: 'rgba(255, 255, 255, 0.05)', color: 'white', fontFamily: 'Inter', fontSize: '1rem', outline: 'none', transition: 'box-shadow 0.2s', ...(status === 'submitting' && { opacity: 0.7, pointerEvents: 'none' }) }} 
                 onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px rgba(99, 102, 241, 0.3)'} 
                 onBlur={(e) => e.target.style.boxShadow = 'none'} 
               />
@@ -79,7 +79,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Email Address" 
                 required
-                style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '16px', border: '1px solid var(--surface-border)', background: 'rgba(255, 255, 255, 0.5)', fontFamily: 'Inter', fontSize: '1rem', outline: 'none', transition: 'box-shadow 0.2s', ...(status === 'submitting' && { opacity: 0.7, pointerEvents: 'none' }) }} 
+                style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '16px', border: '1px solid var(--surface-border)', background: 'rgba(255, 255, 255, 0.05)', color: 'white', fontFamily: 'Inter', fontSize: '1rem', outline: 'none', transition: 'box-shadow 0.2s', ...(status === 'submitting' && { opacity: 0.7, pointerEvents: 'none' }) }} 
                 onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px rgba(99, 102, 241, 0.3)'} 
                 onBlur={(e) => e.target.style.boxShadow = 'none'} 
               />
@@ -92,7 +92,7 @@ const Contact = () => {
                 placeholder="Tell me about your project" 
                 required
                 rows={4} 
-                style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '16px', border: '1px solid var(--surface-border)', background: 'rgba(255, 255, 255, 0.5)', fontFamily: 'Inter', fontSize: '1rem', outline: 'none', resize: 'vertical', transition: 'box-shadow 0.2s', ...(status === 'submitting' && { opacity: 0.7, pointerEvents: 'none' }) }} 
+                style={{ width: '100%', padding: '1rem 1.5rem', borderRadius: '16px', border: '1px solid var(--surface-border)', background: 'rgba(255, 255, 255, 0.05)', color: 'white', fontFamily: 'Inter', fontSize: '1rem', outline: 'none', resize: 'vertical', transition: 'box-shadow 0.2s', ...(status === 'submitting' && { opacity: 0.7, pointerEvents: 'none' }) }} 
                 onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px rgba(99, 102, 241, 0.3)'} 
                 onBlur={(e) => e.target.style.boxShadow = 'none'}
               ></textarea>

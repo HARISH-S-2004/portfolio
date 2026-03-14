@@ -146,16 +146,16 @@ const ProjectModal = ({ project, onClose }) => {
             initial={{ y: 50, opacity: 0 }} 
             animate={{ y: 0, opacity: 1 }} 
             exit={{ y: 50, opacity: 0 }}
-            style={{ background: 'white', borderRadius: '24px', width: '100%', maxWidth: '800px', maxHeight: '90vh', overflowY: 'auto', position: 'relative' }}
+            style={{ background: 'var(--bg-color)', borderRadius: '24px', width: '100%', maxWidth: '800px', maxHeight: '90vh', overflowY: 'auto', position: 'relative' }}
             onClick={(e) => e.stopPropagation()}
             className="glass"
           >
             <div style={{ padding: '3rem' }}>
               <button 
                 onClick={onClose} 
-                style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: '#f1f5f9', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer', border: 'none' }}
+                style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(255, 255, 255, 0.1)', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer', border: 'none' }}
               >
-                <X size={20} color="#0f172a" />
+                <X size={20} color="#ffffff" />
               </button>
 
               <div style={{ display: 'inline-block', padding: '0.4rem 1rem', background: `${project.color}20`, color: project.color, borderRadius: '9999px', fontWeight: 600, fontSize: '0.8rem', marginBottom: '1rem' }}>
@@ -249,7 +249,7 @@ const FeaturedWork = () => {
                   <img className="card-img" src={project.src} alt={project.title || "Art Showcase"} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)' }} loading="lazy" />
                   
                   {project.images?.length > 0 && (
-                    <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(8px)', padding: '0.4rem 0.8rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 600, color: '#0f172a', display: 'flex', alignItems: 'center', gap: '6px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+                    <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(3, 0, 20, 0.85)', backdropFilter: 'blur(8px)', padding: '0.4rem 0.8rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 600, color: 'white', display: 'flex', alignItems: 'center', gap: '6px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                       {project.images.length} Images
                     </div>
