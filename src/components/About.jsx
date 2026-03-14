@@ -30,7 +30,7 @@ const About = () => {
                 I believe that great design is not just about making things look pretty, but about solving problems creatively. By utilizing AI-assisted design workflows, I push boundaries to craft next-generation interfaces that are both beautiful, functional, and deeply human-centric.
               </p>
               
-              <div style={{ display: 'inline-block', padding: '1rem 2rem', background: 'var(--surface)', borderRadius: '16px', border: '1px solid var(--surface-border)', boxShadow: 'var(--shadow-md)', fontWeight: 600 }}>
+              <div style={{ display: 'inline-block', padding: '1rem 2rem', background: 'white', borderRadius: '16px', boxShadow: 'var(--shadow-md)', fontWeight: 600 }}>
                 <span className="text-gradient" style={{ fontSize: '1.5rem', display: 'block' }}>100%</span>
                 Driven by curiosity
               </div>
@@ -67,7 +67,7 @@ const About = () => {
                     objectPosition: 'top center',
                     borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', 
                     boxShadow: 'var(--shadow-lg)',
-                    border: '4px solid rgba(255, 255, 255, 0.1)',
+                    border: '4px solid white',
                     zIndex: 2,
                     display: 'block'
                   }} 

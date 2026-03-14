@@ -31,9 +31,9 @@ const DesignProcess = () => {
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 1, width: '120px' }}
             >
               <div style={{ 
-                width: '70px', height: '70px', borderRadius: '50%', background: 'var(--bg-color)', 
+                width: '70px', height: '70px', borderRadius: '50%', background: 'white', 
                 boxShadow: 'var(--shadow-md)', display: 'flex', justifyContent: 'center', alignItems: 'center',
-                color: step.color, marginBottom: '1rem', border: `2px solid ${step.color}40`
+                color: step.color, marginBottom: '1rem', border: `2px solid ${step.color}20`
               }}>
                 {step.icon}
               </div>
