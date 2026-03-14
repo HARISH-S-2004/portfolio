@@ -134,16 +134,16 @@ const Contact = () => {
           </form>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <a href="https://www.behance.net/harishselvam1/" target="_blank" rel="noreferrer" className="glass" style={{ width: '50px', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', color: 'var(--text-main)', transition: 'transform 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+            <a href="https://www.behance.net/harishselvam1/" target="_blank" rel="noreferrer" className="glass social-icon" style={{ width: '50px', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', color: 'var(--text-main)', transition: 'transform 0.2s', padding: 0 }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                {/* Custom Behance SVG since Lucide doesn't have one natively */}
                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                  <path d="M22 7h-7v2h7V7zM11.5 14.5c0-1.4-1.2-2.5-3-2.5H4v5.3h4.4c1.9 0 3.1-1.3 3.1-2.8zM4 6.7h4c1.6 0 2.8.9 2.8 2.3 0 1.2-.8 1.9-1.8 2.1 1.3.2 2.3 1.2 2.3 2.6 0 1.8-1.5 3-3.6 3H4V6.7zM15 10c-2.3 0-4.1 1.6-4.1 3.8s1.8 4 4.3 4c1.7 0 3-.7 3.6-2H17c-.4 0-1 .4-1.8.4-1.3 0-2.2-.9-2.2-2.3H20v-.4c0-2-1.5-3.5-3-3.5zm-2 2.7c.3-1 1-1.5 2-1.5 1 0 1.7.6 1.8 1.5h-3.8z"/>
                </svg>
             </a>
-            <a href="https://github.com/HARISH-S-2004" target="_blank" rel="noreferrer" className="glass" style={{ width: '50px', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', color: 'var(--text-main)', transition: 'transform 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+            <a href="https://github.com/HARISH-S-2004" target="_blank" rel="noreferrer" className="glass social-icon" style={{ width: '50px', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', color: 'var(--text-main)', transition: 'transform 0.2s', padding: 0 }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
               <Github size={22} />
             </a>
-            <a href="mailto:harishselvam9998@gmail.com" className="glass" style={{ width: '50px', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', color: 'var(--text-main)', transition: 'transform 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+            <a href="mailto:harishselvam9998@gmail.com" className="glass social-icon" style={{ width: '50px', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', color: 'var(--text-main)', transition: 'transform 0.2s', padding: 0 }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
               <Mail size={22} />
             </a>
           </div>
