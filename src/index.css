@@ -469,10 +469,10 @@ section {
   }
 
   .mobile-nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     left: 0;
@@ -480,47 +480,59 @@ section {
     bottom: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: saturate(180%) blur(35px);
-    -webkit-backdrop-filter: saturate(180%) blur(35px);
-    padding: 6rem 1.5rem 2rem 1.5rem;
-    transition: clip-path 0.7s cubic-bezier(0.85, 0, 0.15, 1);
+    background: #0f172a;
+    background-image: 
+      radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(217, 70, 239, 0.1) 0%, transparent 40%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 0 10%;
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
     clip-path: circle(0px at calc(100% - 40px) 40px);
     z-index: 999;
+    counter-reset: nav-counter;
   }
 
   .mobile-nav.mobile-open {
-    clip-path: circle(200% at calc(100% - 40px) 40px);
-  }
-
-  .mobile-nav::before, .mobile-nav::after {
-    display: none;
+    clip-path: circle(150% at calc(100% - 40px) 40px);
   }
 
   .mobile-nav a {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.35rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
     font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    padding: 2.5rem 1rem;
-    text-align: center;
-    color: var(--text-main);
-    background: rgba(255, 255, 255, 0.95) !important;
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-    border-radius: 20px;
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    transform: translateY(20px);
+    font-weight: 800;
+    padding: 0.8rem 0;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     opacity: 0;
+    transform: translateY(30px);
+    position: relative;
+    width: 100%;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
   .mobile-nav.mobile-open a {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 
+  .mobile-nav a::before {
+    counter-increment: nav-counter;
+    content: "0" counter(nav-counter);
+    font-size: 0.9rem;
+    font-family: monospace;
+    color: var(--accent-1);
+    margin-right: 1.5rem;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+
+  /* Staggered Entrance */
   .mobile-nav.mobile-open a:nth-child(1) { transition-delay: 0.2s; }
   .mobile-nav.mobile-open a:nth-child(2) { transition-delay: 0.25s; }
   .mobile-nav.mobile-open a:nth-child(3) { transition-delay: 0.3s; }
@@ -528,28 +540,29 @@ section {
   .mobile-nav.mobile-open a:nth-child(5) { transition-delay: 0.4s; }
   .mobile-nav.mobile-open a:nth-child(6) { transition-delay: 0.45s; }
 
-  .mobile-nav a:nth-child(1) {
-    grid-column: span 2;
-    padding: 3.5rem 1rem;
-    font-size: 2.2rem;
-    background: linear-gradient(135deg, var(--accent-1), var(--accent-3)) !important;
-    color: white !important;
-    border: none !important;
-  }
-
-  .mobile-nav a:nth-child(6) {
-    grid-column: span 2;
-    padding: 2rem 1rem;
-    background: var(--text-main) !important;
-    color: white !important;
-  }
-
   .mobile-nav a:hover, .mobile-nav a:active {
-    transform: scale(0.95);
-    background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important;
-    color: white !important;
-    border-color: transparent !important;
-    -webkit-text-fill-color: white !important;
+    color: var(--accent-1);
+    padding-left: 1rem;
+    background: transparent !important;
+  }
+
+  /* Code-tag effect on mobile too for Vibe Coding unity */
+  .mobile-nav a:hover::after {
+    content: " />";
+    color: var(--accent-2);
+    font-family: monospace;
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    opacity: 0.5;
+  }
+
+  .mobile-nav a:hover::before {
+    content: "< ";
+    color: var(--accent-1);
+    font-family: monospace;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    opacity: 0.5;
   }
   
   .section-title {
